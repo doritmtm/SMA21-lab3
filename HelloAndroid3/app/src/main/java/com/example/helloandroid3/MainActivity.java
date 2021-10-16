@@ -3,6 +3,7 @@ package com.example.helloandroid3;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -73,8 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 sendIntent=new Intent();
                 sendIntent.setAction(Intent.ACTION_VIEW);
                 String url="https://google.com/search?q="+eName.getText();
-                sendIntent.putExtra(Intent.EXTRA_TEXT,url);
-                sendIntent.setType("text/plain");
+                sendIntent.setData(Uri.parse(url));
                 if(sendIntent.resolveActivity(getPackageManager())!=null)
                 {
                     startActivity(sendIntent);
