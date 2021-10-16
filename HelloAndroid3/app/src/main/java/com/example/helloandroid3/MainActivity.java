@@ -13,12 +13,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.helloandroid3.dialogs.HelloDialog;
+import com.example.helloandroid3.lifecycle.ActivityA;
 import com.example.helloandroid3.listeners.SpinnerListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
     private EditText eName;
-    private Button bName,bRandom;
+    private Button bName, bStartAMain;
     private FloatingActionButton bShare,bSearch;
     private TextView tName;
     private Spinner sColor;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         eName=findViewById(R.id.eName);
         bName=findViewById(R.id.bName);
         tName=findViewById(R.id.tName);
-        bRandom=findViewById(R.id.bRandom);
+        bStartAMain =findViewById(R.id.bStartAMain);
         bShare=findViewById(R.id.bShare);
         bSearch=findViewById(R.id.bSearch);
         sColor=findViewById(R.id.sColor);
@@ -50,10 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 helloDialog=new HelloDialog("Hello, "+eName.getText());
                 helloDialog.show(getSupportFragmentManager(),"mock");
                 break;
-            case R.id.bRandom:
-                tName.setText("Hello, Random");
-                helloDialog=new HelloDialog("Hello, Random");
-                helloDialog.show(getSupportFragmentManager(),"mock");
+            case R.id.bStartAMain:
+                startActivity(new Intent(this, ActivityA.class));
                 break;
             case R.id.bShare:
                 sendIntent=new Intent();

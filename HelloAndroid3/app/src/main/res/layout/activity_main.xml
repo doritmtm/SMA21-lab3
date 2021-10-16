@@ -18,12 +18,12 @@
         android:translationY="-50dp" />
 
     <Button
-        android:id="@+id/bRandom"
+        android:id="@+id/bStartAMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/layout2"
         android:onClick="clicked"
-        android:text="Randomize"
+        android:text="Start Activity A"
         app:backgroundTint="#00BCD4" />
 
     <TextView
