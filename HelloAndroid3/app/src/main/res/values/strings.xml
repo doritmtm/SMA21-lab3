@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hello Android 3</string>
+    <string-array name="color_array">
+        <item>red</item>
+        <item>yellow</item>
+        <item>green</item>
+    </string-array>
+</resources>
